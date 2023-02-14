@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Practice Suite">
+    <test name="My test">
+        <parameter name="email" value="lamankien1997@gmail.com"></parameter>
+        <classes>
+            <class name="MyTest.TestClass1"/>
+            <class name="MyTest.TestClass2"/>
+            <class name="MyTest.TestClass3"/>
+        </classes>
+    </test>
+
+</suite> <!-- Suite -->
