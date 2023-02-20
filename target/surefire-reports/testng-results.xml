@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Buy item Test" duration-ms="17552" started-at="2023-02-19T12:35:38 ICT" finished-at="2023-02-19T12:35:55 ICT">
+    <groups>
+    </groups>
+    <test name="Buy and order item test" duration-ms="17552" started-at="2023-02-19T12:35:38 ICT" finished-at="2023-02-19T12:35:55 ICT">
+      <class name="Test.BuyItemTest">
+        <test-method status="PASS" signature="initDriverSession()[pri:0, instance:Test.BuyItemTest@3c407114]" name="initDriverSession" is-config="true" duration-ms="18" started-at="2023-02-19T12:35:38 ICT" finished-at="2023-02-19T12:35:38 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriverSession -->
+        <test-method status="PASS" signature="testBuyItemSuccessful()[pri:0, instance:Test.BuyItemTest@3c407114]" name="testBuyItemSuccessful" duration-ms="16632" started-at="2023-02-19T12:35:38 ICT" finished-at="2023-02-19T12:35:54 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBuyItemSuccessful -->
+        <test-method status="PASS" signature="takeErrorScreenShot(org.testng.ITestResult)[pri:0, instance:Test.BuyItemTest@3c407114]" name="takeErrorScreenShot" is-config="true" duration-ms="3" started-at="2023-02-19T12:35:54 ICT" finished-at="2023-02-19T12:35:54 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testBuyItemSuccessful status=SUCCESS method=BuyItemTest.testBuyItemSuccessful()[pri:0, instance:Test.BuyItemTest@3c407114] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeErrorScreenShot -->
+        <test-method status="PASS" signature="quitSession()[pri:0, instance:Test.BuyItemTest@3c407114]" name="quitSession" is-config="true" duration-ms="745" started-at="2023-02-19T12:35:54 ICT" finished-at="2023-02-19T12:35:55 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitSession -->
+      </class> <!-- Test.BuyItemTest -->
+    </test> <!-- Buy and order item test -->
+  </suite> <!-- Buy item Test -->
+</testng-results>

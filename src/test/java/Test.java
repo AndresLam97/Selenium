@@ -1,3 +1,7 @@
+import Model.Form.DashboardPageForm;
+import Model.Form.LoginPageForm;
+import TestFlow.BaseTest;
+import Utils.WaitUtility;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.*;
@@ -17,15 +21,32 @@ import java.time.Duration;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static org.openqa.selenium.support.locators.RelativeLocator.with;
-
 public class Test {
     public static void main(String[] args) throws InterruptedException {
         WebDriverManager.chromedriver().setup();
-        ChromeDriver chromeDriver = new ChromeDriver();
-        chromeDriver.get("https://rahulshettyacademy.com/client");
-        chromeDriver.manage().window().maximize();
-        WebDriverWait waitDriver = new WebDriverWait(chromeDriver,Duration.ofSeconds(4));
+        ChromeDriver driver = new ChromeDriver();
+        driver.get("https://rahulshettyacademy.com/client");
+        LoginPageForm loginPageForm = new LoginPageForm(driver);
+        loginPageForm.getLoginPageComponentsObject().inputEmail("lamankien1997@gmail.com").inputPassword("Andres0909861773").clickOnLoginButton();
+        WaitUtility.waitUntilURLToBe(driver,5,"https://rahulshettyacademy.com/client/dashboard/dash");
+        List<WebElement> elementList = driver.findElements(By.cssSelector(".mb-3"));
+        for (WebElement webElement : elementList) {
+            WebElement textElement = webElement.findElement(By.tagName("b"));
+            System.out.println(textElement.getText());
+        }
+        driver.quit();
+
+
+
+
+
+
+
+
+
+
+        /*WebDriver driver = goToLandingPage();
+        WebDriverWait waitDriver = new WebDriverWait(driver,Duration.ofSeconds(4));
         List<String> itemList = Arrays.asList("zara coat 3","adidas original","iphone 13 pro");
         SoftAssert softAssert = new SoftAssert();
 
@@ -58,7 +79,7 @@ public class Test {
         softAssert.assertAll();
 
         Thread.sleep(4000);
-        chromeDriver.quit();
+        chromeDriver.quit();*/
     }
 
 }

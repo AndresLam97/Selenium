@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Practice Suite">
-    <test name="My test">
-        <parameter name="email" value="lamankien1997@gmail.com"></parameter>
+<suite name="Login Test" parallel="tests" thread-count="2">
+    <test name="Login Page Test">
         <classes>
-            <class name="MyTest.TestClass1"/>
-            <class name="MyTest.TestClass2"/>
-            <class name="MyTest.TestClass3"/>
+            <class name="TestFlow.BaseTest"></class>
+            <class name="Test.LoginPageTest"> </class>
         </classes>
     </test>
+
+    <test name="Buy Item Test">
+        <classes>
+            <class name="TestFlow.BaseTest"></class>
+            <class name="Test.BuyItemTest"> </class>
+        </classes>
+    </test>
+
 
 </suite> <!-- Suite -->
