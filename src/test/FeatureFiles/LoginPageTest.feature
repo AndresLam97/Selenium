@@ -1,12 +1,23 @@
+
 Feature: Login Feature
+  Sub description of the feature
 
-  Địt con mọe tụi bây
+    @LoginPageErrorValidation
+    Scenario Outline: Test the error validation of the login page
+      Given I landed to the web login page
+      When I perform login with input <email> and <password>
+      Then The page validate and display error
+      Examples:
+        | email                    | password         |
+        | lamankien1997            | Andres0909861773 |
 
-  Background: eo biet ghi gi o day
+    @Regression
+    Scenario Outline: Test the login page when input correct values
+      Given I landed to the web login page
+      When I input the correct <email> and <password> to perform login
+      Then the page validate and switches to the dashboard page
+      Examples:
+        | email                   | password         |
+        | lamankien1997@gmail.com | Andres0909861773 |
 
-  Scenario: Perform login with invalid data
-    Given landed to the web login page
-    When perform login by input <username> and <password>
-    Then display error base on the invalid data
-    Example:
-      username  | password
+

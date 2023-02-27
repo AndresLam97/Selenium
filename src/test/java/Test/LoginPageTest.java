@@ -3,6 +3,7 @@ package Test;
 import Model.PageObject.LoginPageObject;
 import TestFlow.LoginPageTestFlow;
 import Utils.DataReader;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 public class LoginPageTest {
@@ -15,7 +16,7 @@ public class LoginPageTest {
         for (LoginPageObject loginPageObject : loginPageObjects) {
             String email = loginPageObject.getEmail();
             String password = loginPageObject.getPassword();
-            LoginPageTestFlow loginPageTestFlow = new LoginPageTestFlow(email,password);
+            LoginPageTestFlow loginPageTestFlow = new LoginPageTestFlow(new ChromeDriver(), email,password);
             loginPageTestFlow.performLogin();
         }
     }

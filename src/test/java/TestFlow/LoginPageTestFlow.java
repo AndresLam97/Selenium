@@ -9,16 +9,22 @@ import org.testng.Assert;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class LoginPageTestFlow extends BaseTest{
+public class LoginPageTestFlow{
 
     private String email;
     private String password;
-    private static WebDriver driver = new BaseTest().getDriver();
+    private static WebDriver driver;
 
-    public LoginPageTestFlow(String email, String password)
+    public LoginPageTestFlow(WebDriver driver, String email, String password)
     {
+        this.driver = driver;
         this.email = email;
         this.password = password;
+    }
+
+    public LoginPageTestFlow(WebDriver driver)
+    {
+        this.driver = driver;
     }
 
     public void performLogin()
@@ -29,11 +35,11 @@ public class LoginPageTestFlow extends BaseTest{
         loginPageComponents.inputEmail(email);
         loginPageComponents.inputPassword(password);
         loginPageComponents.clickOnLoginButton();
-        validateData(loginPageComponents);
+        //validateData(loginPageComponents);
     }
 
 
-    private void validateData(LoginPageComponents loginPageComponents)
+    public void validateData(LoginPageComponents loginPageComponents)
     {
         boolean emailValid = validateEmail(this.email);
         boolean passwordValid = validatePassword(this.password);
@@ -92,4 +98,13 @@ public class LoginPageTestFlow extends BaseTest{
         String actualURL = driver.getCurrentUrl();
         Assert.assertEquals(expectedURL,actualURL, "The actual url is not match with expected url !!!");
     }
+
+    public void setPassword(String password)
+    {this.password = password;}
+
+    public void setEmail(String email)
+    { this.email = email;}
+
+
+
 }

@@ -2,35 +2,46 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Buy item Test" duration-ms="17552" started-at="2023-02-19T12:35:38 ICT" finished-at="2023-02-19T12:35:55 ICT">
+  <suite name="Surefire suite" duration-ms="9354" started-at="2023-02-28T00:38:34 ICT" finished-at="2023-02-28T00:38:44 ICT">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.LoginPageRunnerRegression@28eaa59a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test name="Buy and order item test" duration-ms="17552" started-at="2023-02-19T12:35:38 ICT" finished-at="2023-02-19T12:35:55 ICT">
-      <class name="Test.BuyItemTest">
-        <test-method status="PASS" signature="initDriverSession()[pri:0, instance:Test.BuyItemTest@3c407114]" name="initDriverSession" is-config="true" duration-ms="18" started-at="2023-02-19T12:35:38 ICT" finished-at="2023-02-19T12:35:38 ICT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriverSession -->
-        <test-method status="PASS" signature="testBuyItemSuccessful()[pri:0, instance:Test.BuyItemTest@3c407114]" name="testBuyItemSuccessful" duration-ms="16632" started-at="2023-02-19T12:35:38 ICT" finished-at="2023-02-19T12:35:54 ICT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testBuyItemSuccessful -->
-        <test-method status="PASS" signature="takeErrorScreenShot(org.testng.ITestResult)[pri:0, instance:Test.BuyItemTest@3c407114]" name="takeErrorScreenShot" is-config="true" duration-ms="3" started-at="2023-02-19T12:35:54 ICT" finished-at="2023-02-19T12:35:54 ICT">
+    <test name="Surefire test" duration-ms="9354" started-at="2023-02-28T00:38:34 ICT" finished-at="2023-02-28T00:38:44 ICT">
+      <class name="Runner.LoginPageRunnerRegression">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.LoginPageRunnerRegression@28eaa59a]" name="setUpClass" is-config="true" duration-ms="1022" started-at="2023-02-28T00:38:34 ICT" finished-at="2023-02-28T00:38:35 ICT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testBuyItemSuccessful status=SUCCESS method=BuyItemTest.testBuyItemSuccessful()[pri:0, instance:Test.BuyItemTest@3c407114] output={null}]]]>
+                <![CDATA[org.testng.TestRunner@26c47874]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- takeErrorScreenShot -->
-        <test-method status="PASS" signature="quitSession()[pri:0, instance:Test.BuyItemTest@3c407114]" name="quitSession" is-config="true" duration-ms="745" started-at="2023-02-19T12:35:54 ICT" finished-at="2023-02-19T12:35:55 ICT">
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.LoginPageRunnerRegression@28eaa59a]" name="runScenario" duration-ms="8076" started-at="2023-02-28T00:38:35 ICT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-02-28T00:38:43 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Test the login page when input correct values"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login Feature"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- quitSession -->
-      </class> <!-- Test.BuyItemTest -->
-    </test> <!-- Buy and order item test -->
-  </suite> <!-- Buy item Test -->
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runner.LoginPageRunnerRegression@28eaa59a]" name="tearDownClass" is-config="true" duration-ms="58" started-at="2023-02-28T00:38:44 ICT" finished-at="2023-02-28T00:38:44 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- Runner.LoginPageRunnerRegression -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
 </testng-results>
